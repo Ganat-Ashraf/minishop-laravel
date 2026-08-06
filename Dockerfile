@@ -17,4 +17,4 @@ RUN composer install --no-dev --optimize-autoloader --no-scripts
 
 EXPOSE 10000
 
-CMD sh -c "touch database/database.sqlite && php artisan package:discover && php artisan migrate:fresh --seed --force && php artisan serve --host=0.0.0.0 --port=10000"
+CMD ["sh", "-c", "touch database/database.sqlite && php artisan migrate:fresh --seed --force && php artisan serve --host=0.0.0.0 --port=10000"]
