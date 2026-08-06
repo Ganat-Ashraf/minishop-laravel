@@ -30,6 +30,8 @@ RUN chown -R www-data:www-data /var/www/storage /var/www/bootstrap/cache
 
 EXPOSE 8000
 
+# إيجاد قاعدة بيانات sqlite وإنشاء الجداول
 RUN touch database/database.sqlite && php artisan migrate:fresh --seed --force
 
-CMD php artisan serve --host=0.0.0.0 --port=8000
+# تشغيل السيرفر الرئيسي (حسب نوع الـ Base Image في الملف)
+CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=10000"]
