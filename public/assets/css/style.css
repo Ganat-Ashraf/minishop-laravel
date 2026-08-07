@@ -81,35 +81,6 @@
     background-color: transparent;
 }
 
-/* Scrolled state styles */
-/* .navbar.scrolled {
-    background-color: white;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    padding: 10px 0;
-} */
-
-/* .navbar.scrolled .logo h3 {
-    color: #333;
-}
-
-.navbar.scrolled .list ul li a {
-    color: #333;
-}
-
-.navbar.scrolled .list .dropdown-menu {
-    background-color: white;
-    border: 1px solid #eee;
-} */
-
-/* .navbar.scrolled .list .dropdown-menu li a {
-    color: #333;
-} */
-
-/* .navbar.scrolled .list .dropdown-menu li:hover a {
-    color: orangered;
-    background-color: transparent;
-} */
-
 /* Original navbar styles */
 .navbar .logo {
     padding-left: 80px;
@@ -1536,4 +1507,171 @@
     border: 1px solid #dbcc8f;
     color: #dbcc8f;
     background-color: #ffff;
+}
+
+
+
+
+
+
+@media (max-width: 991px) {
+
+    /* --- الهيدر العلوي (Startup Bar) --- */
+    .startup {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+        padding: 10px 15px;
+    }
+    .startup .phone, 
+    .startup .email, 
+    .startup .times {
+        width: 100%;
+        margin: 0;
+    }
+
+    /* --- شريط التنقل (Navbar) --- */
+    .navbar {
+        padding: 15px 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+    .navbar .list .ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /* --- السلايدر الرئيسي (Hero Swiper) --- */
+    .section .bannerSwiper .content {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 40px 20px;
+    }
+    .section .bannerSwiper .content .box,
+    .section .bannerSwiper .content .image {
+        width: 100%;
+    }
+    .section .bannerSwiper .content .image img {
+        max-width: 80%;
+        height: auto;
+    }
+
+    /* --- قسم الخدمات (Services) --- */
+    .service {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+    .service .card {
+        width: calc(50% - 20px);
+        min-width: 280px;
+    }
+
+    /* --- شبكة المنتجات (Products) --- */
+    .products .containery {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 0 15px;
+    }
+
+    /* --- قسم التشكيلة (Collection) --- */
+    .collection .container {
+        flex-direction: column;
+    }
+    .collection .box.one,
+    .collection .second-c {
+        width: 100%;
+    }
+    .collection .third {
+        flex-direction: column;
+    }
+
+    /* --- قسم العرض والعداد (Deal / Timer) --- */
+    .timer .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .timer .image, 
+    .timer .content {
+        width: 100%;
+    }
+    .timer #countdown,
+    .timer .images {
+        justify-content: center;
+    }
+
+    /* --- آراء العملاء المميزات (Testimonials Bar) --- */
+    .testimonials .bar {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    /* --- الفوتر (Footer) --- */
+    .ends .containers {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+}
+
+
+@media (max-width: 767px) {
+
+    /* --- شريط التنقل (Navbar) --- */
+    .navbar .list .ul {
+        font-size: 14px;
+        gap: 10px;
+    }
+
+    /* --- نصوص السلايدر (Hero Text) --- */
+    .section .bannerSwiper .content .box h5 {
+        font-size: 28px;
+        line-height: 1.2;
+    }
+    .section .bannerSwiper .content .box p {
+        font-size: 14px;
+    }
+
+    /* --- كروت الخدمات (Services) --- */
+    .service .card {
+        width: 100%;
+    }
+
+    /* --- المنتجات (عمود واحد للموبايل) --- */
+    .products .containery {
+        grid-template-columns: 1fr;
+    }
+
+    /* --- العداد (Timer Countdown) --- */
+    .timer #countdown {
+        gap: 10px;
+    }
+    .timer #countdown div {
+        padding: 10px;
+        min-width: 60px;
+    }
+    .timer #countdown div span {
+        font-size: 18px;
+    }
+
+    /* --- أشرطة وآراء العملاء --- */
+    .testimonials .bar {
+        grid-template-columns: 1fr;
+    }
+
+    /* --- صور إنستجرام (Instagram Gallery) --- */
+    .starts .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* --- الفوتر (Footer) --- */
+    .ends .containers {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .ends .containers .icons,
+    .ends .containers .text {
+        justify-content: center;
+    }
 }
