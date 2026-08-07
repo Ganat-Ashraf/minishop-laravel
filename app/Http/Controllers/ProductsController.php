@@ -61,6 +61,7 @@ public function storeProduct(Request $request) {
     Products::create([
         'name' => $request->name,
         'price' => $request->price,
+        'description' => $request->description ?? '', // لو فاضي هيحطه نص فاضي
         'image' => $request->image,
     ]);
 
