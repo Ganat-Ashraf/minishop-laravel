@@ -15,9 +15,6 @@ COPY . .
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 RUN composer install --no-dev --optimize-autoloader --no-scripts
 
-# إعطاء صلاحية التشغيل لملف الـ entrypoint
-RUN chmod +x /var/www/entrypoint.sh
-
 EXPOSE 10000
 
-ENTRYPOINT ["/var/www/entrypoint.sh"]
+CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=10000"]
