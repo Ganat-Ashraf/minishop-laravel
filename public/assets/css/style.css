@@ -4,6 +4,13 @@
     font-family: "Open Sans", arial, sans-serif;
 }
 
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
 ::-webkit-scrollbar {
     width: 10px; /* Adjust width to match your image */
 }
@@ -1510,3 +1517,766 @@
 }
 
 
+@media (max-width: 991px) {
+    /* هتحطي التعديلات الخاصة بالتابلت هنا */
+    /* navbar */
+    
+}
+
+@media (max-width: 767px) {
+    .startup {
+        flex-direction: column; /* يخلي الهاتف والإيميل والمواعيد تحت بعض */
+        height: auto;           /* يلغي الارتفاع الثابت عشان يستوعبهم */
+        padding: 10px;          /* بادنج هادي من كل الأجناب */
+        gap: 6px;               /* مسافة مناسبة بين كل سطر والتاني */
+        justify-content: center;
+        align-items: center;    /* يسنطر الكلام في النص بالضبط */
+    }
+
+    .startup .phone,
+    .startup .email,
+    .startup .times {
+        width: 100%;
+        justify-content: center; /* يسنطر كل سطر جوه مساحته */
+    }
+
+    .startup .email{
+        
+        width: 200px;
+        text-align: center;
+        padding-right: 10px;
+    }
+    .startup .times p{
+        width: 300px;
+        text-align: center;
+    }
+
+}
+
+@media (max-width: 768px) {
+    /* --- الشريط الأسود العلوي --- */
+    .startup {
+        flex-direction: column;
+        height: auto;
+        padding: 6px 10px;  /* تقليل الارتفاع عشان ماياخدش مساحة كبيرة */
+        gap: 4px;           /* مسافة بين الموبايل والإيميل والمواعيد */
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* --- الهيدر الرئيسي --- */
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 15px;
+        background-color: #dbcc8f;
+    }
+
+    .navbar .logo {
+        /* border: solid black 2px; */
+        padding-left: 0;   /* إلغاء الـ padding القديم */
+    }
+
+    .navbar .logo h3 {
+        font-size: 13px;
+    }
+
+    .navbar .list {
+        padding-right: 0;
+        padding-top: 0;
+        /* border: solid black 2px; */
+        width: 250px;
+
+    }
+
+    .navbar .list .ul {
+        display: flex;
+        gap: 8px;
+    }
+
+    .navbar .list ul li {
+        padding-right: 0;
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* إلغاء الارتفاع الثابت والسماح للسكشن للتمدد */
+    .section {
+        height: auto;
+        margin-top: 0;
+        padding: 40px 15px;
+    }
+
+    /* تحويل السلايد لرأسي: النص فوق والصورة تحت */
+    .section .swiper-slide {
+        flex-direction: column !important;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .section .container-1 {
+        margin-left: 0;
+    }
+
+    /* إعادة ضبط صندوق النصوص */
+    .section .container-1 .box {
+        margin-top: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section .container-1 .box h5 {
+        font-size: 26px; /* تصغير العنوان ليناسب الشاشة */
+        margin-bottom: 15px;
+    }
+
+    .section .container-1 .box p {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    /* إلغاء الـ Margin السالب وجعل الصورة Responsive */
+    .section .image {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .section .image img {
+        width: 100%;       /* الصورة تاخد عرض الشاشة المتاح */
+        max-width: 320px;  /* عدم التضخم */
+        height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    /* تحويل الحاوية الرئيسية لوضع رأسي */
+    .service {
+        flex-direction: column;
+        align-items: center;
+        padding-left: 0;
+        margin-top: 50px;
+        gap: 35px; /* مسافة شيك بين كل كارت والتاني */
+    }
+
+    /* ضبط عرض الكارت للموبايل */
+    .service .card {
+        width: 100% !important;
+        max-width: 320px;
+        margin-top: 0 !important; /* إلغاء المارجن السالب والزيادات */
+    }
+
+    /* تسنيطر الصور تماماً بدون margin-left عشوائي */
+    .service .card img.one,
+    .service .card img.two,
+    .service .card img.three {
+        margin-left: auto !important;
+        margin-right: auto !important;
+        display: block;
+        margin-bottom: 15px;
+    }
+
+    .service .card img.one { width: 70px; }
+    .service .card img.two { width: 60px; }
+    .service .card img.three { width: 60px; }
+
+    .service .card .card-body .card-title {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .service .card .card-body .card-text {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+}
+
+@media (max-width: 768px) {
+    .products {
+        padding-bottom: 60px;
+    }
+
+    /* تصغير Padding وخط العنوان */
+    .products .title {
+        padding-top: 50px;
+        margin-bottom: 30px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .products .title h5 {
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+
+    .products .title p {
+        font-size: 13px;
+    }
+
+    /* تسنيطر الحاوية وإلغاء الـ Padding الشمال */
+    .products .containery {
+        padding-left: 0;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    /* جعل الكارت بعرض مناسب ومسنطر */
+    .products .cardo {
+        margin-right: 0;
+        margin-bottom: 20px;
+        width: 100%;
+        max-width: 300px; /* أو خليه 280px حسب ذوقك */
+        height: auto;
+        padding-bottom: 20px;
+    }
+
+    .products .cardo .image,
+    .products .cardo .image img {
+        width: 100%;
+        height: 320px;
+    }
+
+    /* إظهار الأزرار بشكل لطيف في الموبايل بدون Hover */
+    .products .cardo .btns {
+        opacity: 1;
+        visibility: visible;
+        margin-top: -60px;
+        justify-content: center;
+    }
+
+    .products .cardo .btns .btn {
+        width: 100px;
+        height: 40px;
+        font-size: 11px;
+    }
+
+    /* ضبط المسافات بين الـ Category والنجوم */
+    .products .cardo .rating {
+        justify-content: space-between;
+        padding-right: 10px;
+    }
+
+    .products .cardo .rating p {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    /* إلغاء الارتفاعات القديمة والمسافات البيضاء */
+    .collection,
+    .collection .container,
+    .collection .second-c,
+    .collection .third {
+        display: block !important;
+        height: auto !important;
+        min-height: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .collection .container {
+        padding: 0 15px !important;
+    }
+
+    /* ضبط الحجم والمسافة السفلية للبوكسات */
+    .collection .box {
+        width: 100% !important;
+        height: 350px !important;
+        margin-bottom: 20px !important;
+        position: relative !important;
+        overflow: hidden !important;
+        background-size: cover !important;
+        background-position: center !important;
+    }
+
+    /* تسنيطر صورة الكارت الأزرق */
+    .collection .box.two {
+        background-position: center top !important;
+    }
+
+    /* جعل خلفية المحتوى بيضاء والكلام أسود */
+    .collection .box .content {
+        position: absolute !important;
+        bottom: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        padding: 15px !important;
+        text-align: center !important;
+        background: rgba(255, 255, 255, 0.85) !important; /* خلفية بيضاء رايقة */
+        z-index: 5 !important;
+    }
+
+    .collection .box .content h2 {
+        font-size: 22px !important;
+        color: #000000 !important; /* لون العنوان أسود */
+        margin: 5px 0 !important;
+        font-weight: bold !important;
+    }
+
+    .collection .box .content span {
+        font-size: 11px !important;
+        color: #333333 !important; /* لون العنوان الفرعي أسود غامق */
+        letter-spacing: 1px;
+    }
+
+    .collection .box .content p {
+        display: none !important;
+    }
+
+    .collection .box .content .btn {
+        margin: 8px auto 0 !important;
+        display: inline-block !important;
+        background-color: #000 !important;
+        color: #fff !important;
+    }
+    .third .box.three{
+        margin-top: -200px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* تحويل السكشن لارتفاع تلقائي وتصفير الـ Margins العالية */
+    .timer {
+        height: auto !important;
+        padding: 40px 15px !important;
+    }
+
+    .timer .container {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+    }
+
+    /* جعل الصورة مرنة ومسنطرة */
+    .timer .container .image {
+        margin-top: 0 !important;
+        margin-right: 0 !important;
+        width: 100% !important;
+        margin-bottom: 25px !important;
+    }
+
+    .timer .container .image img {
+        width: 100% !important;
+        max-width: 380px !important;
+        height: auto !important;
+    }
+
+    /* ضبط اتجاه المحتوى والمسافات */
+    .timer .container .content {
+        margin-top: 0 !important;
+        width: 100% !important;
+    }
+
+    .timer .container .content h2 {
+        font-size: 28px !important;
+        margin-top: 10px !important;
+        margin-bottom: 20px !important;
+    }
+
+    /* تسنيطر الـ Countdown */
+    .timer .container #countdown {
+        justify-content: center !important;
+        gap: 15px !important;
+        margin-bottom: 20px !important;
+    }
+
+    .timer .container #countdown span {
+        font-size: 26px !important;
+    }
+
+    .timer .container #countdown p {
+        font-size: 10px !important;
+    }
+
+    .timer .container .content a {
+        font-size: 22px !important;
+        display: block !important;
+        margin-bottom: 10px !important;
+    }
+
+    /* تسنيطر السعر والصور المصغرة */
+    .timer .container .content .price {
+        justify-content: center !important;
+        margin-bottom: 20px !important;
+    }
+
+    .timer .container .content .price span {
+        font-size: 20px !important;
+    }
+
+    .timer .container .images {
+        display: flex !important;
+        justify-content: center !important;
+        gap: 10px !important;
+    }
+
+    .timer .container .images img {
+        width: 70px !important;
+        height: auto !important;
+    }
+}
+
+@media (max-width: 768px) {
+    /* تصفير المارجن وتحويل الحاوية الرئيسية لرأسية */
+    .testimonials {
+        margin-top: 40px !important;
+        margin-bottom: 50px !important;
+    }
+
+    .testimonials .container {
+        flex-direction: column !important;
+        align-items: center !important;
+        padding: 0 15px !important;
+    }
+
+    /* ضبط القائمة الجانبية (bar) لتصبح بعرض كامل */
+    .testimonials .container .bar {
+        width: 100% !important;
+        height: auto !important;
+        margin-right: 0 !important;
+        margin-bottom: 40px !important;
+    }
+
+    .testimonials .container .bar .box {
+        height: auto !important;
+        padding: 20px 15px !important;
+    }
+
+    .testimonials .container .bar .box img {
+        margin-top: 0 !important;
+    }
+
+    /* ضبط أبعاد Swiper والـ rate ليتناسبا مع الشاشة */
+    .testimonials .swiper,
+    .testimonials .container .rate {
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    .testimonials .container .rate .title h2 {
+        font-size: 26px !important;
+        margin-bottom: 15px !important;
+        text-align: center !important;
+    }
+
+    .testimonials .container .rate .title p {
+        text-align: center !important;
+    }
+
+    .testimonials .container .rate .image {
+        display: flex !important;
+        justify-content: center !important;
+        margin-top: 30px !important;
+    }
+
+    .testimonials .container .rate .text {
+        font-size: 15px !important;
+        padding-left: 15px !important;
+    }
+
+    .testimonials .container .rate .person {
+        text-align: center !important;
+    }
+
+    /* ضبط مكان نقاط الترقيم (Pagination) لمنتصف الشاشة */
+    .testimonials .swiper-pagination {
+        margin-left: 0 !important;
+        position: relative !important;
+        margin-top: 20px !important;
+        text-align: center !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .starts {
+        margin-top: 40px !important;
+    }
+
+    .starts .title h1 {
+        font-size: 24px !important;
+    }
+
+    .starts .title p {
+        padding: 0 15px !important;
+        font-size: 14px !important;
+    }
+
+    /* تحويل الـ Container لنظام CSS Grid بدلاً من Flex */
+    .starts .container {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important; /* صورتين في الصف */
+        margin-left: 0 !important;
+        gap: 0 !important;
+        width: 100% !important;
+    }
+
+    .starts .container .boxes {
+        position: relative !important;
+        width: 100% !important;
+        overflow: hidden !important;
+    }
+
+    /* جعل الصور مرنة بالكامل لتملأ الخلية */
+    .starts .container img {
+        width: 100% !important;
+        height: 200px !important;
+        object-fit: cover !important;
+    }
+
+    /* ضبط مكان أيقونة إنستجرام في منتصف كل صورة عند الـ Hover */
+    .starts .container .icon {
+        position: absolute !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    .starts .container .icon i {
+        padding: 0 !important;
+    }
+}
+
+@media (max-width: 768px) {
+    /* إلغاء الارتفاع الثابت والـ Padding الكبيرة */
+    .ends {
+        height: auto !important;
+        padding-top: 50px !important;
+        padding-bottom: 30px !important;
+    }
+
+    /* تحويل العناصر لتنزل تحت بعض بدلاً من جنب بعض */
+    .ends .containers {
+        flex-direction: column !important;
+        padding: 0 20px !important;
+    }
+
+    /* توحيد أبعاد الأعمدة وتوسيط المسافات */
+    .ends .container-1,
+    .ends .container-2,
+    .ends .container-3,
+    .ends .container-4 {
+        width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        margin-bottom: 35px !important;
+    }
+
+    /* تعديل مسافات الأيقونات */
+    .ends .container-1 .icons {
+        margin-top: 20px !important;
+        margin-left: 0 !important;
+    }
+
+    .ends .container-1 .icons i {
+        margin-right: 15px !important;
+    }
+
+    /* ضبط القائمة المزدوجة داخل HELP لتظهر بشكل منظم */
+    .ends .container-3 .text {
+        flex-direction: column !important;
+    }
+
+    .ends .container-3 .text .second {
+        margin-left: 0 !important;
+    }
+
+    /* ضبط حقوق النشر والتأكد من ظهورها بوضوح */
+    .copy {
+        margin-top: 20px !important;
+        margin-bottom: 10px !important;
+        padding: 0 15px !important;
+        font-size: 13px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    /* إلغاء الارتفاع الثابت للسكشن */
+    .brief {
+        height: auto !important;
+        margin-top: 40px !important;
+        padding: 30px 15px !important;
+    }
+
+    /* تحويل الحاوية لنظام رأسي بعرض كامل */
+    .brief .containery {
+        flex-direction: column !important;
+        width: 100% !important;
+    }
+
+    /* ضبط الحواف المخصصة للصورة */
+    .brief .containery .image {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        width: 100% !important;
+    }
+
+    /* جعل الصورة مرنة وذات ارتفاع مناسب */
+    .brief .containery .image img {
+        width: 100% !important;
+        height: 320px !important;
+        object-fit: cover !important;
+    }
+
+    /* تعديل الهوامش العلوية والنصوص */
+    .brief .containery .content {
+        margin-top: 30px !important;
+        text-align: center !important;
+    }
+
+    .brief .containery .content h2 {
+        font-size: 26px !important;
+        margin-bottom: 20px !important;
+    }
+
+    .brief .containery .content p {
+        font-size: 14px !important;
+    }
+
+    .brief .containery .content .btn {
+        margin: 10px auto 0 !important;
+    }
+}
+
+@media (max-width: 991px) {
+    /* إلغاء الهوامش والعروض الثابتة للسكشن الرئيسي */
+    .blogs {
+        flex-direction: column-reverse; /* يضع المقالات أولاً ثم الـ Sidebar تحتها */
+        margin-left: 0 !important;
+        margin-top: 40px !important;
+        padding: 0 15px !important;
+        width: 100% !important;
+    }
+
+    /* جعل الحاويات تأخذ العرض الكامل */
+    .blogs .container-1,
+    .blogs .container-2 {
+        width: 100% !important;
+        margin-right: 0 !important;
+    }
+
+    .blogs .container-1 {
+        margin-top: 50px;
+    }
+
+    /* تحويل كروت المقالات لتكون رأسية بدلاً من أفقية */
+    .blogs .container-2 .box {
+        flex-direction: column !important;
+        margin-bottom: 40px !important;
+    }
+
+    .blogs .container-2 .box .image img {
+        width: 100% !important;
+        height: auto !important;
+        max-height: 250px;
+        object-fit: cover;
+        margin-right: 0 !important;
+        margin-bottom: 20px;
+    }
+
+    /* تعديل مدخل البحث والـ Icons */
+    .blogs .container-1 .search input {
+        width: 100% !important;
+    }
+
+    /* تعديل القائمة الكروت الجانبية Recent Blog */
+    .blogs .container-1 .box-2 .div {
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    .blogs .container-1 .box-3 .div {
+        width: 100% !important;
+        height: auto !important;
+    }
+}
+
+/* Responsive Styles for Cart Page */
+@media (max-width: 991px) {
+    .car {
+        margin-top: 40px;
+        padding: 0 15px;
+    }
+
+    /* جعل الحاوية والجدول مرنين */
+    .car .car-t {
+        width: 100% !important;
+        border-spacing: 0 20px;
+        display: block;
+        overflow-x: auto; /* السماح بالتمرير الأفقي إذا لزم الأمر */
+    }
+
+    /* لإخفاء رأس الجدول على شاشات الموبايل لتسهيل العرض الرأسي */
+    .car .car-t thead {
+        display: none;
+    }
+
+    .car .car-t tbody {
+        display: block;
+        width: 100%;
+    }
+
+    /* تحويل كل صف في الجدول إلى كارت منفصل */
+    .car .car-t tbody tr {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #f9f9f9;
+        padding: 20px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .car .car-t tbody tr td {
+        margin-right: 0 !important;
+        margin-bottom: 12px;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* إعادة ضبط أبعاد صور المنتجات */
+    .car .car-t tbody tr td.image img,
+    .car .car-t tbody tr td img {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        width: 120px !important;
+        height: auto;
+    }
+
+    /* ضبط أزرار الحذف والأيقونات */
+    .car .car-t tbody tr td i {
+        margin-left: 0 !important;
+    }
+
+    /* تعديل مدخلات الكمية */
+    .car .car-t tr td input {
+        width: 100% !important;
+        max-width: 200px;
+        margin-left: 0 !important;
+    }
+
+    /* تجاوب ملخص السلة Cart Summary */
+    .cart-summary {
+        width: 100% !important;
+        height: auto !important;
+        margin-bottom: 50px;
+        box-sizing: border-box;
+    }
+
+    .cart-summary .total {
+        width: 100% !important;
+    }
+
+    .cart-summary .btn {
+        width: 100% !important;
+        margin-left: 0 !important;
+    }
+}
