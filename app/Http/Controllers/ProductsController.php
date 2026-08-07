@@ -53,6 +53,20 @@ class ProductsController extends Controller
         return view('pages.cart', ['cartItems' => $carts]);
     }
 
+    public function addToCart($id) {
+    $product = Products::findOrFail($id);
+
+    Cart::create([
+        'name'           => $product->name,
+        'price'          => $product->price,
+        'original_price' => $product->original_price ?? $product->price,
+        'image'          => $product->image,
+        'quantity'       => 1,
+    ]);
+
+    return redirect('/cart')->with('success', 'Product added to cart successfully!');
+}
+
     public function create() {
     return view('pages.create');
 }
@@ -62,7 +76,7 @@ public function storeProduct(Request $request) {
         'name' => $request->name,
         'price' => $request->price,
         'category' => $request->category,
-        'description' => $request->description,
+        'description' => $request->description ?? '',
         'image' => $request->image,
     ]);
 

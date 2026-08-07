@@ -23,6 +23,7 @@ Route::get('/blog' , [ProductsController::class, 'blog']);
 Route::get('/cart' , [ProductsController::class, 'cart']);
 
 Route::delete('/cart/{id}', [ProductsController::class, 'destroy'])->name('cart.remove');
+Route::post('/cart/add/{id}', [ProductsController::class, 'addToCart'])->name('cart.add');
 Route::post('/checkout', [ProductsController::class, 'checkout'])->name('checkout');
 
 Route::get('/admin/create', [ProductsController::class, 'create']);
