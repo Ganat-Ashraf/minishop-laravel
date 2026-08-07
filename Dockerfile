@@ -17,5 +17,4 @@ RUN composer install --no-dev --optimize-autoloader --no-scripts
 
 EXPOSE 10000
 
-# إنشاء ملف الداتا بيز وتنفيذ المايجريشن والـ Seed وقت تشغيل الحاوية فوراً
-CMD ["sh", "-c", "mkdir -p database && touch database/database.sqlite && php artisan migrate:fresh --seed --force && php artisan serve --host=0.0.0.0 --port=10000"]
+CMD ["sh", "-c", "mkdir -p database && touch database/database.sqlite && php artisan migrate:fresh --seed --force && php artisan serve --host=0.0.0.0 --port=10000 --public=public"]
