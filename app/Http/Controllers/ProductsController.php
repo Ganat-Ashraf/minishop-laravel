@@ -60,6 +60,7 @@ class ProductsController extends Controller
         'name'           => $product->name,
         'price'          => $product->price,
         'original_price' => $product->original_price ?? $product->price,
+        'offer_price' => $request->offer_price ?? null,
         'image'          => $product->image,
         'quantity'       => 1,
     ]);
