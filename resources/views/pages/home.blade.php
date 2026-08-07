@@ -95,7 +95,7 @@
                                 @csrf
                                 <input type="hidden" name="name" value="{{ $item->name }}">
                                 <input type="hidden" name="price" value="{{ $item->price }}">
-                                <input type="hidden" name="offer_price" value="{{ $item->offer_price ?? 0 }}">
+                                <input type="hidden" name="offer_price" value="{{ $item->offer_price }}">
                                 <input type="hidden" name="image" value="{{ $item->image }}">
                                 <input type="hidden" name="category" value="{{ $item->category }}">
                                 <input type="hidden" name="description" value="{{ $item->description ?? '' }}">
