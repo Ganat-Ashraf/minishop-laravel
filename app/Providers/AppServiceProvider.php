@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Facades\URL;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -14,12 +15,17 @@ class AppServiceProvider extends ServiceProvider
     {
         //
     }
+    
 
     /**
      * Bootstrap any application services.
      */
     public function boot(): void
-    {
-        Schema::defaultStringLength(191); // Fix for MySQL key length issue
+{
+    Schema::defaultStringLength(191);
+
+    if (config('app.env') !== 'local') {
+        URL::forceScheme('https');
     }
+}
 }
