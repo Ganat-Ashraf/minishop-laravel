@@ -24,3 +24,6 @@ Route::get('/cart' , [ProductsController::class, 'cart']);
 
 Route::delete('/cart/{id}', [ProductsController::class, 'destroy'])->name('cart.remove');
 Route::post('/checkout', [ProductsController::class, 'checkout'])->name('checkout');
+
+Route::get('/admin/create', [ProductsController::class, 'create']);
+Route::post('/admin/store', [ProductsController::class, 'storeProduct'])->name('products.store');

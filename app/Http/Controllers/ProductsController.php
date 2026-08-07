@@ -52,5 +52,19 @@ class ProductsController extends Controller
         $carts = Cart::all();
         return view('pages.cart', ['cartItems' => $carts]);
     }
+
+    public function create() {
+    return view('pages.create');
+}
+
+public function storeProduct(Request $request) {
+    Products::create([
+        'name' => $request->name,
+        'price' => $request->price,
+        'image' => $request->image,
+    ]);
+
+    return redirect('/')->with('success', 'تم إضافة المنتج بنجاح!');
+}
     
 }
