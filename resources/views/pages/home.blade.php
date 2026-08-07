@@ -116,8 +116,8 @@
                         <h6>{{ $item->name }}</h6>
                     </div>
                     <div class="price">
-                        @if($item->original_price > 0 && $item->offer_price > 0)
-                            <span><s>${{ $item->original_price }}</s> ${{ $item->offer_price }}</span>
+                        @if($item->price > 0 && $item->offer_price > 0)
+                            <span><s>${{ $item->price }}</s> ${{ $item->offer_price }}</span>
                         @elseif($item->price > 0)
                             <span>${{ $item->price }}</span>
                         @endif

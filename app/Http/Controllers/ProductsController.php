@@ -76,6 +76,7 @@ public function storeProduct(Request $request) {
     Products::create([
         'name' => $request->name,
         'price' => $request->price,
+        'offer_price' => $request->offer_price ?? null,
         'category' => $request->category,
         'description' => $request->description ?? '',
         'image' => $request->image,
