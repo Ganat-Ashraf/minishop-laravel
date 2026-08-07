@@ -91,7 +91,7 @@
                         @endif
                         <img src="{{ asset('assets/images/' . $item->image) }}" alt="{{ $item->name }}">
                         <div class="btns" style="overflow: hidden;">
-                            <form action="{{ url('store') }}" method="POST">
+                            <form action="{{ route('store') }}" method="POST">
                                 @csrf
                                 <input type="hidden" name="name" value="{{ $item->name }}">
                                 <input type="hidden" name="price" value="{{ $item->price }}">
