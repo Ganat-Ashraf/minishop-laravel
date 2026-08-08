@@ -13,6 +13,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+       \App\Models\Products::create([
+        'name' => 'FREE NIKE RN 2019 ID',
+        'price' => 120.00,
+        'image' => 'product-1.jpg',
+        'description' => '',
+    ]);
     }
 }
