@@ -1,6 +1,7 @@
 <?php
 use App\Http\Controllers\ProductsController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Artisan;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,3 +29,8 @@ Route::post('/checkout', [ProductsController::class, 'checkout'])->name('checkou
 
 Route::get('/admin/create', [ProductsController::class, 'create']);
 Route::post('/admin/store', [ProductsController::class, 'storeProduct'])->name('products.store');
+
+Route::get('/run-setup-db', function () {
+    Artisan::call('migrate:fresh', ['--seed' => true, '--force' => true]);
+    return 'Database migrated and seeded successfully!';
+});
